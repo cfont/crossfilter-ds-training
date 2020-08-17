@@ -21,7 +21,10 @@
         { date: "2011-11-14T17:25:45Z", quantity: 2, total: 200, tip: 0, type: "cash", productIDs: ["002"] },
         { date: "2011-11-14T17:29:52Z", quantity: 1, total: 200, tip: 100, type: "visa", productIDs: ["004"] }
       ];
-      console.log(data);
+
+      var facts=crossfilter(data);
+
+      console.log(facts);
   </script>
 </body>
 </html>
