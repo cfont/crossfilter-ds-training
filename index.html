@@ -40,6 +40,12 @@
       var tipDimension = facts.dimension(function (d) { return d.tip; });
       console.log(tipDimension.bottom(3));
 
+      var multiDimension = facts.dimension(function(d){return d.type+':'+d.tip;});
+      var dateDimension = facts.dimension(function(d){
+        var p = new Date(d.date);
+        return p.getMonth()+'-'+p.getFullYear();
+      });
+
       //print_filter('typeDimension');
 
       //console.log('All the facts:');
