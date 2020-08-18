@@ -30,6 +30,11 @@
         { date: "2011-11-14T17:29:52Z", quantity: 1, total: 200, tip: 100, type: "visa", productIDs: ["004"] }
       ];
 
+      data.forEach(function(d){
+        var tempDate = new Date(d.date);
+        d.date = tempDate;
+      })
+
       var facts=crossfilter(data);
 
       // var newData = [{ date: "2011-11-14T17:30:00Z", quantity: 1, total: 200, tip: 100, type: "visa", productIDs: ["004"] }];
@@ -41,10 +46,7 @@
       console.log(tipDimension.bottom(3));
 
       var multiDimension = facts.dimension(function(d){return d.type+':'+d.tip;});
-      var dateDimension = facts.dimension(function(d){
-        var p = new Date(d.date);
-        return p.getMonth()+'-'+p.getFullYear();
-      });
+      var dateDimension = facts.dimension(function(d){return d.date;});
 
       //print_filter('typeDimension');
 
