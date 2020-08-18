@@ -43,7 +43,8 @@
       //console.log(facts.size());
       console.log('group all: ' + facts.groupAll().value() );
       console.log('group all / reduce count: ' + facts.groupAll().reduceCount().value()); //groupAll.value defaults to reduceCount
-
+      console.log('groupAll.reduceSum.value: ' + facts.groupAll().reduceSum(function(d){return d.total;}).value());
+      console.log('groupAll.reduceSum.value: ' + facts.groupAll().reduceSum(function (d) { return d.quantity; }).value());
 
 
   </script>
