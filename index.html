@@ -54,6 +54,15 @@
       var typeGroup = typeDimension.group();
       var dateGroup = dateDimension.group();
 
+      // these reduce functions could be called whatever we want
+      function reduceAdd(i,d){ return d.tip > 0 ? i+1 : i; };
+      function reduceRemove(i,d){ return d.tip > 0 ? i-1 : i; };
+      function reduceInitial(){ return 0; };
+
+      print_filter('typeGroup.reduceCount()');
+      // it is important to include the reduce functions below in the correct order
+      print_filter('typeGroup.reduce(reduceAdd,reduceRemove,reduceInitial)');
+
       // typeGroup = crossfilter(data)
       //  .dimension(function(d){return d.type})
       //  .group(function (d) { return d.substring(0, 1) });
@@ -70,7 +79,7 @@
       // console.log(facts.all());
       // console.log("Trying the print_filter function");
 
-      print_filter('dateGroup.reduceSum(function(d){return d.total;})');
+      //print_filter('dateGroup.reduceSum(function(d){return d.total;})');
 
       // print_filter('typeDimension.group().reduceCount()');
 
