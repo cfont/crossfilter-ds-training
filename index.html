@@ -57,13 +57,16 @@
       // facts.add(newData);
 
       // print_filter('dateGroup'); //outputs in order of value descending
-      console.log(facts.groupAll().value()); //12
-      console.log(facts.groupAll().reduceCount().value()); //12
+      // console.log(facts.groupAll().value()); //12
+      // console.log(facts.groupAll().reduceCount().value()); //12
 
       // console.log('All the facts:');
       // console.log(facts.all());
       // console.log("Trying the print_filter function");
-      // print_filter('facts');
+
+      print_filter('typeDimension.group()');
+      print_filter('typeDimension.group().reduceCount()');
+
       // console.log("size: ");
       // console.log(facts.size());
       // console.log('group all: ' + facts.groupAll().value() );
