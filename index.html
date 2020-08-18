@@ -32,8 +32,7 @@
 
       var facts=crossfilter(data);
 
-      var newData = [{ date: "2011-11-14T17:30:00Z", quantity: 1, total: 200, tip: 100, type: "visa", productIDs: ["004"] }];
-      facts.add(newData);
+//      var newData = [{ date: "2011-11-14T17:30:00Z", quantity: 1, total: 200, tip: 100, type: "visa", productIDs: ["004"] }];
 
       console.log(facts);
       console.log('All the facts:');
@@ -42,6 +41,8 @@
       print_filter('facts');
       console.log("size: ");
       console.log(facts.size());
+      console.log('group all: ' + facts.groupAll().value() );
+
 
   </script>
 </body>
