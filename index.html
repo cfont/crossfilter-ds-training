@@ -52,7 +52,7 @@
       var scatterDimension = facts.dimension(function(d){return [d.total,d.tip]});
 
       var typeGroup = typeDimension.group();
-      var dateGroup = dateDimension.group(function(d){return d.getHours();});
+      var dateGroup = dateDimension.group();
 
       // typeGroup = crossfilter(data)
       //  .dimension(function(d){return d.type})
@@ -70,7 +70,7 @@
       // console.log(facts.all());
       // console.log("Trying the print_filter function");
 
-      print_filter('typeGroup.reduceSum(function(d){return d.total;})');
+      print_filter('dateGroup.reduceSum(function(d){return d.total;})');
 
       // print_filter('typeDimension.group().reduceCount()');
 
