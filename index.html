@@ -55,8 +55,8 @@
       var dateGroup = dateDimension.group();
 
       // these reduce functions could be called whatever we want
-      function reduceAdd(i,d){ return i+1; };
-      function reduceRemove(i,d){ console.log(d); return i-1; };
+      function reduceAdd(i,d){ return d.tip > 0 ? i+1 : i; };
+      function reduceRemove(i,d){ return d.tip > 0 ? i-1 : i; };
       function reduceInitial(){ return 0; };
 
       print_filter('typeGroup.reduceCount()');
