@@ -32,19 +32,20 @@
 
       var facts=crossfilter(data);
 
-//      var newData = [{ date: "2011-11-14T17:30:00Z", quantity: 1, total: 200, tip: 100, type: "visa", productIDs: ["004"] }];
+      // var newData = [{ date: "2011-11-14T17:30:00Z", quantity: 1, total: 200, tip: 100, type: "visa", productIDs: ["004"] }];
 
-      //console.log(facts);
-      console.log('All the facts:');
-      console.log(facts.all());
-      //console.log("Trying the print_filter function");
-      //print_filter('facts');
-      //console.log("size: ");
-      //console.log(facts.size());
-      console.log('group all: ' + facts.groupAll().value() );
-      console.log('group all / reduce count: ' + facts.groupAll().reduceCount().value()); //groupAll.value defaults to reduceCount
-      console.log('groupAll.reduceSum.value: ' + facts.groupAll().reduceSum(function(d){return d.total;}).value());
-      console.log('groupAll.reduceSum.value: ' + facts.groupAll().reduceSum(function (d) { return d.quantity; }).value());
+      var typeDimension = facts.dimension(function(d){console.log(d);return d.type;});
+
+      //console.log('All the facts:');
+      //console.log(facts.all());
+      // console.log("Trying the print_filter function");
+      // print_filter('facts');
+      // console.log("size: ");
+      // console.log(facts.size());
+      // console.log('group all: ' + facts.groupAll().value() );
+      // console.log('group all / reduce count: ' + facts.groupAll().reduceCount().value()); //groupAll.value defaults to reduceCount
+      // console.log('groupAll.reduceSum.value: ' + facts.groupAll().reduceSum(function(d){return d.total;}).value());
+      // console.log('groupAll.reduceSum.value: ' + facts.groupAll().reduceSum(function (d) { return d.quantity; }).value());
 
 
   </script>
