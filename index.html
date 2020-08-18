@@ -37,6 +37,9 @@
       var typeDimension = facts.dimension(function(d){return d.type;});
       console.log(typeDimension.top(3)); //sorted by type, alphabetically, descending... interesting
 
+      var tipDimension = facts.dimension(function (d) { return d.tip; });
+      console.log(tipDimension.bottom(3));
+
       //print_filter('typeDimension');
 
       //console.log('All the facts:');
