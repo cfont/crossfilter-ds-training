@@ -56,8 +56,9 @@
 
       // facts.add(newData);
 
-      print_filter('dateGroup'); //outputs in order of value descending
-      console.log(dateGroup.size()); // output in order of key ascending
+      // print_filter('dateGroup'); //outputs in order of value descending
+      console.log(facts.groupAll().reduceSum(function(d){return d.total;}).value());
+      console.log(typeDimension.groupAll().reduceSum(function (d) { return d.total; }).value());
 
       // console.log('All the facts:');
       // console.log(facts.all());
