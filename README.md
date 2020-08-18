@@ -7,7 +7,7 @@
 
 ## About <a name = "about"></a>
 
-This is my repo for the code I write while going through this training course on [LinkedIn Learning](www.linkedin.com/learning/crossfilter-for-data-science-essential-training/downloading-crossfilter-js)
+This is my repo for the code I write while going through this training course on [LinkedIn Learning](https://www.linkedin.com/learning/crossfilter-for-data-science-essential-training/downloading-crossfilter-js)
 
 ### Original Course Details
 
