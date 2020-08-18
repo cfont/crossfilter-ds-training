@@ -48,6 +48,8 @@
       var multiDimension = facts.dimension(function(d){return d.type+':'+d.tip;});
       var dateDimension = facts.dimension(function(d){return d.date;});
 
+      var scatterDimension = facts.dimension(function(d){return [d.total,d.tip]});
+
       //print_filter('typeDimension');
 
       //console.log('All the facts:');
