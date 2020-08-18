@@ -40,10 +40,10 @@
       // var newData = [{ date: "2011-11-14T17:30:00Z", quantity: 1, total: 200, tip: 100, type: "visa", productIDs: ["004"] }];
 
       var typeDimension = facts.dimension(function(d){return d.type;});
-      console.log(typeDimension.top(3)); //sorted by type, alphabetically, descending... interesting
+      //console.log(typeDimension.top(3)); //sorted by type, alphabetically, descending... interesting
 
       var tipDimension = facts.dimension(function (d) { return d.tip; });
-      console.log(tipDimension.bottom(3));
+      //console.log(tipDimension.bottom(3));
 
       var multiDimension = facts.dimension(function(d){return d.type+':'+d.tip;});
       var dateDimension = facts.dimension(function(d){return d.date;});
@@ -51,7 +51,8 @@
       var scatterDimension = facts.dimension(function(d){return [d.total,d.tip]});
 
       var typeGroup = typeDimension.group();
-      print_filter('typeGroup');
+      print_filter('typeGroup'); //outputs in order of value descending
+      console.log(typeGroup.all()); // output in order of key ascending
 
       //console.log('All the facts:');
       //console.log(facts.all());
