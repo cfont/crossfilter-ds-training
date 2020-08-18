@@ -52,15 +52,15 @@
       var scatterDimension = facts.dimension(function(d){return [d.total,d.tip]});
 
       var typeGroup = typeDimension.group(function(d){return d.substring(0,1)});
-      var dateGroup = dateDimension.group()
+      var dateGroup = dateDimension.group(function(d){return d.getHours();});
 
-      facts.add(newData);
+      // facts.add(newData);
 
       print_filter('dateGroup'); //outputs in order of value descending
       console.log(dateGroup.size()); // output in order of key ascending
 
-      //console.log('All the facts:');
-      //console.log(facts.all());
+      // console.log('All the facts:');
+      // console.log(facts.all());
       // console.log("Trying the print_filter function");
       // print_filter('facts');
       // console.log("size: ");
