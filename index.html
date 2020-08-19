@@ -58,7 +58,7 @@
       function reduceRemove(i,d){ return d.tip > 0 ? i-1 : i; };
       function reduceInitial(){ return 0; };
 
-      totalDimension.filterFunction(function(d){ return d%100==0;});
+      totalDimension.filterFunction(function(d){ return 0<d && d<100 || 200<d && d<=300;});
 
       // typeDimension.filterExact("cash");
       print_filter('facts');
