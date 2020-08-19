@@ -58,8 +58,7 @@
       function reduceRemove(i,d){ return d.tip > 0 ? i-1 : i; };
       function reduceInitial(){ return 0; };
 
-      dateDimension.filterRange([new Date("2011-11-14"),new Date("2011-11-14T16:58:03Z")]); // range array is minimum, maximum in that order
-      // filterRange uses >= for minimum but < on maximum
+      dateDimension.filterFunction(function(d){ return d.getHours()==11;});
 
       // typeDimension.filterExact("cash");
       print_filter('facts');
