@@ -63,6 +63,11 @@
       console.log('facts: ' + facts.groupAll().value()); //obeys all of the filters
       console.log('typeDim (tab): ' + typeDimension.groupAll().value());
 
+      facts.remove();
+
+      console.log('facts: ' + facts.groupAll().value()); //obeys all of the filters
+      console.log('typeDim (tab): ' + typeDimension.groupAll().value());
+
       // typeDimension.filterExact("cash");
       print_filter('facts');
       // print_filter('totalDimension.filterExact(200)');
