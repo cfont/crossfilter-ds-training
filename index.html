@@ -58,7 +58,11 @@
       function reduceRemove(i,d){ return d.tip > 0 ? i-1 : i; };
       function reduceInitial(){ return 0; };
 
+      typeDimension.filter("tab");
       dateDimension.filterFunction(function(d){ return d.getHours()==11;});
+      console.log(facts.groupAll().value()); //obeys all of the filters
+      console.log(typeDimension.groupAll().value());
+      console.log(dateDimension.groupAll().value());
 
       // typeDimension.filterExact("cash");
       print_filter('facts');
