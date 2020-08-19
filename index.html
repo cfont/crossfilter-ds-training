@@ -60,6 +60,7 @@
 
       dateDimension.filterFunction(function(d){ return d.getHours()==11;});
       console.log(facts.groupAll().value()); //obeys all of the filters
+      console.log(typeDimension.groupAll().value());
 
       // typeDimension.filterExact("cash");
       print_filter('facts');
