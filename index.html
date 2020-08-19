@@ -58,10 +58,10 @@
       function reduceRemove(i,d){ return d.tip > 0 ? i-1 : i; };
       function reduceInitial(){ return 0; };
 
-      print_filter('totalDimension.filterExact(200)');
+      // print_filter('totalDimension.filterExact(200)');
       print_filter('typeDimension.filterExact("tab")');
       // it is important to include the reduce functions below in the correct order
-      print_filter('typeGroup.reduce(reduceAdd,reduceRemove,reduceInitial)');
+      // print_filter('typeGroup.reduce(reduceAdd,reduceRemove,reduceInitial)');
 
       // typeGroup = crossfilter(data)
       //  .dimension(function(d){return d.type})
