@@ -58,7 +58,7 @@
       function reduceRemove(i,d){ return d.tip > 0 ? i-1 : i; };
       function reduceInitial(){ return 0; };
 
-      dateDimension.filterExact("2011-11-14T17:29:52Z");
+      dateDimension.filterExact(new Date("2011-11-14T17:29:52Z"));
       // typeDimension.filterExact("cash");
       print_filter('facts');
       // print_filter('totalDimension.filterExact(200)');
