@@ -42,14 +42,13 @@
 
       var typeDimension = facts.dimension(function(d){return d.type;});
       //console.log(typeDimension.top(3)); //sorted by type, alphabetically, descending... interesting
-
       var tipDimension = facts.dimension(function (d) { return d.tip; });
       //console.log(tipDimension.bottom(3));
 
       // var multiDimension = facts.dimension(function(d){return d.type+':'+d.tip;});
       var dateDimension = facts.dimension(function(d){return d.date;});
-
       var scatterDimension = facts.dimension(function(d){return [d.total,d.tip]});
+      var totalDimension = facts.dimension(function(d){return d.total;});
 
       var typeGroup = typeDimension.group();
       var dateGroup = dateDimension.group();
@@ -59,7 +58,7 @@
       function reduceRemove(i,d){ return d.tip > 0 ? i-1 : i; };
       function reduceInitial(){ return 0; };
 
-      print_filter('typeGroup.reduceCount()');
+      print_filter('totalDimension.filterExact(200)');
       // it is important to include the reduce functions below in the correct order
       print_filter('typeGroup.reduce(reduceAdd,reduceRemove,reduceInitial)');
 
