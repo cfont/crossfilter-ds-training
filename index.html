@@ -58,9 +58,11 @@
       function reduceRemove(i,d){ return d.tip > 0 ? i-1 : i; };
       function reduceInitial(){ return 0; };
 
-      print_filter('totalDimension.filterExact(200)');
-      totalDimension.filterAll();
-      print_filter('typeDimension.filterExact("tab")');
+      typeDimension.filterExact("visa");
+      print_filter('facts');
+      // print_filter('totalDimension.filterExact(200)');
+      // totalDimension.filterAll();
+      // print_filter('typeDimension.filterExact("tab")');
       // it is important to include the reduce functions below in the correct order
       // print_filter('typeGroup.reduce(reduceAdd,reduceRemove,reduceInitial)');
 
