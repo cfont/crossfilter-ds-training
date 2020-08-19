@@ -58,7 +58,7 @@
       function reduceRemove(i,d){ return d.tip > 0 ? i-1 : i; };
       function reduceInitial(){ return 0; };
 
-      typeDimension.filterFunction(function(d){ return d.indexOf('s') != -1;});
+      dateDimension.filterFunction(function(d){ return d.getHours()==11;});
 
       // typeDimension.filterExact("cash");
       print_filter('facts');
